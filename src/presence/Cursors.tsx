@@ -1,17 +1,17 @@
 import * as React from "react";
-import useCursorTracking from "./use-cursors";
-import OtherCursors from "./other-cursors";
 import Chat from "./Chat";
+import OtherCursors from "./other-cursors";
+import useCursorTracking from "./use-cursors";
 
-const ENABLE_CHAT = true;
+const ENABLE_CHAT = false;
 
 export default function Cursors() {
-  useCursorTracking("document");
+	useCursorTracking("document");
 
-  return (
-    <>
-      <OtherCursors showChat={ENABLE_CHAT} />
-      {ENABLE_CHAT && <Chat />}
-    </>
-  );
+	return (
+		<>
+			<OtherCursors showChat={ENABLE_CHAT} />
+			{ENABLE_CHAT && <Chat />}
+		</>
+	);
 }
